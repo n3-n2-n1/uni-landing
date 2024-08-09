@@ -4,13 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eva Chat</title>
+    <style>
+        /* Asegúrate de que el cuerpo tome todo el espacio disponible */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Define el tamaño y estilo responsivo para el objeto eva-chat */
+        eva-chat {
+            width: 100%;
+            max-width: 400px; /* Puedes ajustar este valor para hacer el chat más grande */
+            height: 600px; /* Ajusta la altura como prefieras */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Asegúrate de que el objeto sea responsivo en diferentes tamaños de pantalla */
+        @media (max-width: 600px) {
+            eva-chat {
+                max-width: 100%;
+                height: 500px; /* Ajuste de altura para pantallas más pequeñas */
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <eva-chat instance-url="https://americas-channels-instance1.eva.bot" org-id="8657bc21-646a-48a3-9b5a-59168a134490"
-        env-id="7ce39105-90a1-476b-a9ae-2a2d09a0ad73" bot-id="3598fde4-f770-4623-af48-a9bb174dfe23"
-        channel-id="e955db57-221e-41f7-a680-5b13c41a8b3c"></eva-chat>
+    <eva-chat instance-url="https://americas-channels-instance1.eva.bot" 
+              org-id="8657bc21-646a-48a3-9b5a-59168a134490"
+              env-id="7ce39105-90a1-476b-a9ae-2a2d09a0ad73" 
+              bot-id="3598fde4-f770-4623-af48-a9bb174dfe23"
+              channel-id="e955db57-221e-41f7-a680-5b13c41a8b3c">
+    </eva-chat>
     <script src="https://eva-americas-resources.eva.bot/eva-chat.js"></script>
 </body>
 
